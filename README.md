@@ -29,6 +29,7 @@ brew install zsh
 # warp or fig with iTerm?
 brew install --cask warp
 brew install --cask fig
+brew install --cask iterm2
 brew install --cask visual-studio-code
 
 brew install --cask google-chrome
@@ -60,7 +61,11 @@ SSH
 ```bash
 ssh-keygen -t ed25519 -C "me@email.com"
 pbcopy < ~/.ssh/id_ed25519.pub 
+ssh-keygen -t rsa -C "me@email.com"
+pbcopy < ~/.ssh/id_rsa.pub
 ```
+
+# try asdf for both node and ruby
 
 nvm
 ```bash
@@ -73,6 +78,37 @@ nvm install node
 nvm install --lts
 nvm use --lts
 npm install -g npm
+npm install -g yarn
+```
+
+Ruby (rbenv or rvm)
+```bash
+curl -L https://get.rvm.io | bash -s stable
+brew install readline
+brew install openssl
+brew install rbenv 
+brew install ruby-build
+```
+
+MySQL (with workbench)
+```
+brew install mysql
+brew services start mysql
+or 
+https://dev.mysql.com/downloads/mysql/
+https://dev.mysql.com/downloads/workbench/
+```
+
+PostgreSQL
+```bash
+brew install postgresql
+brew services start postgresql
+```
+
+Redis
+```bash
+brew install redis
+brew services start redis
 ```
 
 Mongo
